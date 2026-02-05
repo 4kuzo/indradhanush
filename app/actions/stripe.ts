@@ -9,8 +9,27 @@ export async function createCheckoutSession(amountInCents: number, email: string
 
   // If amount is 0, skip Stripe and return success directly
   if (finalAmount === 0) {
-    // Here you could store the email in a database for free pre-orders
-    // For now, we just return success
+    // For free orders, send a notification email
+    try {
+      if (process.env.RESEND_API_KEY) {
+        const { Resend } = await import("resend")
+        const resend = new Resend(process.env.RESEND_API_KEY)
+
+        await resend.emails.send({
+          from: "Indradhanush Pre-Order <onboarding@resend.dev>",
+          to: "mailforakuzo@gmail.com",
+          subject: "New Free Pre-Order!",
+          html: `<p>New pre-order from: <strong>${email}</strong></p><p>Amount: FREE</p>`,
+        })
+      } else {
+        console.log("RESEND_API_KEY missing, skipping email notification")
+      }
+    } catch (error) {
+      console.error("Failed to send email notification:", error)
+      // Don't fail the request, just log the error
+    }
+
+    // Return success
     return { clientSecret: null, isFree: true, email }
   }
 
