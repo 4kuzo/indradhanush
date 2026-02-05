@@ -36,8 +36,8 @@ export function HeroSection() {
       {/* Album artwork */}
       <div className="relative z-10 w-72 h-72 md:w-96 md:h-96 bg-card border border-border overflow-hidden">
         <Image
-          src="/album-cover.png"
-          alt="Indradhanush Album Cover - A close-up black and white grainy image of an eye with a rainbow-colored iris"
+          src="/album art mockup1.png"
+          alt="Indradhanush Album Cover"
           fill
           className="object-cover"
           priority
