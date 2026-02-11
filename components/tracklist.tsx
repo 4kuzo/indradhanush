@@ -56,7 +56,7 @@ export function Tracklist() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-8 tracking-wider">
-          Total Runtime: {totalMins}:{String(totalSecs).padStart(2, "0")}+
+          Total Runtime: {totalMins}:{String(totalSecs).padStart(2, "0")}
         </p>
       </div>
     </section>
