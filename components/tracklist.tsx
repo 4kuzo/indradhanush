@@ -1,13 +1,13 @@
 "use client"
 
 const tracks = [
-  { number: "01", title: "Andhakaar", producer: "Kaaja", duration: "2:35" },
-  { number: "02", title: "Ghar", producer: "Mayuresh", duration: "3:00" },
-  { number: "03", title: "Jiwan Saathi", producer: "baadbeats", duration: "2:27" },
-  { number: "04", title: "Paschhataap", producer: "Sapjer", duration: "2:54" },
-  { number: "05", title: "Indradhanush", producer: "Mayuresh", duration: "3:18" },
-  { number: "06", title: "TBD", producer: null, duration: "—" },
-  { number: "07", title: "Jiwan Yesai Bitchha?", producer: "Dhruv", duration: "2:32" },
+  { number: "01", title: "Ranga Intro w/ Siddhant", producer: "", duration: "0:56" },
+  { number: "02", title: "Andhakaar", producer: "", duration: "2:35" },
+  { number: "03", title: "Ghar", producer: "", duration: "3:00" },
+  { number: "04", title: "Jiwan Saathi", producer: "", duration: "2:27" },
+  { number: "05", title: "Paschhataap", producer: "", duration: "2:54" },
+  { number: "06", title: "Indradhanush w/ Bahun & Tracy", producer: "", duration: "3:10" },
+  { number: "07", title: "Jiwan Yesai Bitchha?", producer: "", duration: "2:32" },
 ]
 
 // Calculate total runtime (excluding TBD track)
@@ -45,11 +45,7 @@ export function Tracklist() {
                   <span className={`text-sm md:text-base group-hover:text-primary transition-colors ${track.title === "TBD" ? "text-muted-foreground italic" : ""}`}>
                     {track.title}
                   </span>
-                  {track.producer && (
-                    <span className="text-xs text-muted-foreground/60">
-                      Prod. {track.producer}
-                    </span>
-                  )}
+
                 </div>
               </div>
               <span className="text-xs text-muted-foreground tabular-nums">
