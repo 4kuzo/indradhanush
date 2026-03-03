@@ -15,8 +15,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'AKUZO | Indradhanush - Pre-Order',
-  description: 'Pre-order Indradhanush by AKUZO. 7 colors. 7 truths. Available March 3, 2026.',
+  title: 'AKUZO',
+  description: 'Indradhanush by AKUZO. 7 colors. 7 truths. Out Now.',
 }
 
 export const viewport: Viewport = {

@@ -1,73 +1,54 @@
 "use client"
 
 import React from "react"
-
-import { useState } from "react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Checkout } from "@/components/checkout"
+
+const platforms = [
+  { name: "Apple Music", url: "https://music.apple.com/us/album/indradhanush/1879181627" },
+  { name: "Deezer", url: "https://www.deezer.com/en/album/923349221" },
+  { name: "SoundCloud", url: "https://soundcloud.com/akuzo/sets/indradhanush" },
+  { name: "Spotify", url: "https://open.spotify.com/album/0zRMd1AFCrSGrmdshoyce5" },
+  { name: "Tidal", url: "https://tidal.com/album/500639127" },
+  { name: "YouTube Music", url: "#" },
+  { name: "iTunes", url: "https://music.apple.com/us/album/indradhanush/1879313042" },
+]
 
 export function HeroSection() {
-  const [showCheckout, setShowCheckout] = useState(false)
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0" />
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-black">
+      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center md:items-center justify-center gap-12 lg:gap-24">
+        {/* Left: Album Cover */}
+        <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] shrink-0 border border-white/10">
+          <Image
+            src="/album art mockup1.png"
+            alt="Indradhanush Album Cover"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
-      {/* Artist name */}
-      <h1 className="relative z-10 text-sm tracking-[0.4em] uppercase text-muted-foreground mb-12 font-sans">
-        A K U Z O
-      </h1>
+        {/* Right: Title & Links */}
+        <div className="w-full max-w-sm flex flex-col">
+          <h1 className="text-3xl md:text-4xl font-black text-center text-white uppercase mb-6 tracking-wide" style={{ fontFamily: 'Impact, sans-serif' }}>
+            INDRADHANUSH
+          </h1>
 
-      {/* Album artwork */}
-      <div className="relative z-10 w-72 h-72 md:w-96 md:h-96 bg-card border border-border overflow-hidden">
-        <Image
-          src="/album art mockup1.png"
-          alt="Indradhanush Album Cover"
-          fill
-          className="object-cover"
-          priority
-        />
+          <div className="flex flex-col space-y-3">
+            {platforms.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#f05a28] hover:bg-[#d94d1c] transition-colors text-white text-center font-bold py-3 text-lg lg:text-xl"
+              >
+                {platform.name}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* Album title */}
-      <h2 className="relative z-10 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-center text-balance font-sans mt-12 mb-6">
-        INDRADHANUSH
-      </h2>
-
-      {/* Album description */}
-      <div className="relative z-10 max-w-lg text-center mb-8">
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed italic">
-          This Album is me, split into 7 colors.
-        </p>
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mt-2">
-          Different moods. Different truths. All from the same phase of my life.
-        </p>
-      </div>
-
-      {/* Pre-Order Button */}
-      <div className="relative z-10 flex flex-col items-center gap-4 mt-8">
-        <p className="text-sm italic text-muted-foreground">
-          &quot;you don't have to pay for my art, not yet&quot;
-        </p>
-        <Button
-          size="lg"
-          className="h-14 px-12 text-sm tracking-widest uppercase bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
-          onClick={() => setShowCheckout(true)}
-        >
-          Pre-Order Free
-        </Button>
-        <p className="text-xs text-muted-foreground">
-          Digital Album — Available March 3, 2026
-        </p>
-      </div>
-
-      {/* Checkout Modal */}
-      {showCheckout && (
-        <Checkout
-          onClose={() => setShowCheckout(false)}
-        />
-      )}
     </section>
   )
 }

@@ -5,6 +5,7 @@ import React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { subscribeEmail } from "@/app/actions/subscribe"
 
 export function EmailSignup() {
   const [email, setEmail] = useState("")
@@ -15,14 +16,23 @@ export function EmailSignup() {
     if (!email) return
 
     setStatus("loading")
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setStatus("success")
-    setEmail("")
-    
-    // Reset after 3 seconds
+
+    try {
+      const response = await subscribeEmail(email)
+
+      if (response.success) {
+        setStatus("success")
+        setEmail("")
+      } else {
+        setStatus("error")
+        console.error("Subscription error:", response.error)
+      }
+    } catch (error) {
+      setStatus("error")
+      console.error("Failed to subscribe:", error)
+    }
+
+    // Reset after 3 seconds if success or error
     setTimeout(() => setStatus("idle"), 3000)
   }
 
