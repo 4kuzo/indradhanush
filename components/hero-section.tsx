@@ -4,12 +4,12 @@ import React from "react"
 import Image from "next/image"
 
 const platforms = [
-  { name: "Apple Music", url: "https://music.apple.com/us/album/indradhanush/1879181627" },
-  { name: "Deezer", url: "https://www.deezer.com/en/album/923349221" },
-  { name: "SoundCloud", url: "https://soundcloud.com/akuzo/sets/indradhanush" },
   { name: "Spotify", url: "https://open.spotify.com/album/0zRMd1AFCrSGrmdshoyce5" },
-  { name: "Tidal", url: "https://tidal.com/album/500639127" },
+  { name: "Apple Music", url: "https://music.apple.com/us/album/indradhanush/1879181627" },
   { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_mgBNvQieO2sRmQC50pTpVesSa6PDdZdCI&si=F8ZxGZyBP8pizApZ" },
+  { name: "SoundCloud", url: "https://soundcloud.com/akuzo/sets/indradhanush" },
+  { name: "Deezer", url: "https://www.deezer.com/en/album/923349221" },
+  { name: "Tidal", url: "https://tidal.com/album/500639127" },
   { name: "iTunes", url: "https://music.apple.com/us/album/indradhanush/1879313042" },
 ]
 
