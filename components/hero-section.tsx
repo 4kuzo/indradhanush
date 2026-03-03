@@ -9,7 +9,7 @@ const platforms = [
   { name: "SoundCloud", url: "https://soundcloud.com/akuzo/sets/indradhanush" },
   { name: "Spotify", url: "https://open.spotify.com/album/0zRMd1AFCrSGrmdshoyce5" },
   { name: "Tidal", url: "https://tidal.com/album/500639127" },
-  { name: "YouTube Music", url: "#" },
+  { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_mgBNvQieO2sRmQC50pTpVesSa6PDdZdCI&si=F8ZxGZyBP8pizApZ" },
   { name: "iTunes", url: "https://music.apple.com/us/album/indradhanush/1879313042" },
 ]
 
