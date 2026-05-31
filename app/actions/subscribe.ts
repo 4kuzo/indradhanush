@@ -3,8 +3,8 @@
 export async function subscribeEmail(email: string) {
     try {
         if (!process.env.RESEND_API_KEY) {
-            console.warn("RESEND_API_KEY is not set. Simulating success.")
-            return { success: false, error: "RESEND_API_KEY is missing." }
+            console.log(`[Local Simulation] New newsletter subscription from: ${email}`)
+            return { success: true, simulated: true }
         }
 
         const { Resend } = await import("resend")
