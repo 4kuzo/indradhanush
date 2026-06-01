@@ -1,13 +1,12 @@
 "use client"
 
 import React from "react"
-import { Calendar, Globe, Sparkles } from "lucide-react"
+import { Globe, Sparkles } from "lucide-react"
 
 export function AboutArtist() {
   const profileDetails = [
     { label: "Based In", value: "Dallas, Texas, USA", icon: Globe },
     { label: "Profession", value: "Music Artist, Rapper & Producer", icon: Sparkles },
-    { label: "Active Since", value: "2022 - Present", icon: Calendar },
   ]
 
   return (
