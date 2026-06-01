@@ -54,7 +54,7 @@ export function AboutArtist() {
                 Currently based out of Dallas, Texas, Akuzo serves as a pivotal bridge between the traditional storytelling roots of Nepali culture and the modern rhythms of international hip-hop.
               </p>
               <p>
-                Since stepping into the professional arena in 2022, Akuzo's songwriting has consistently explored deeply resonant themes of cultural identity, internal resilience, and reflective self-discovery. His tracks appeal globally, speaking powerfully both to Nepali youth back home and the diaspora abroad.
+                Since stepping into the professional arena in 2019, Akuzo's songwriting has consistently explored deeply resonant themes of cultural identity, internal resilience, and reflective self-discovery. His tracks appeal globally, speaking powerfully both to Nepali youth back home and the diaspora abroad.
               </p>
               <p>
                 Akuzo represents a growing wave of boundary-pushing artists who are blending native vernacular poetry with atmospheric beats—paving a unique pathway for the globalization of Nepali rap.
